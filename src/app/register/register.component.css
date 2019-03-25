@@ -1,0 +1,60 @@
+.main {
+    background-image: url('/assets/image/bg.jpg');
+    background-repeat: repeat-x;
+    animation: slideleft 20000s infinite linear;
+    -webkit-animation: slideleft 20000s infinite linear;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 100vh;
+}
+
+.bg-layer {
+    background: rgba(0, 0, 0, 0.7);
+    min-height: 100vh;
+}
+
+@keyframes slideleft {
+    from {
+        background-position: 0%;
+    }
+    to {
+        background-position: 90000%;
+    }
+}
+
+@-webkit-keyframes slideleft {
+    from {
+        background-position: 0%;
+    }
+    to {
+        background-position: 90000%;
+    }
+}
+
+.container-fluid {
+    background-image: radial-gradient(circle at top right, white, rgb(218, 242, 198));
+    opacity: 0.7;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.card {
+    background-color: rgb(145, 151, 141);
+    margin-top: 50px;
+}
+
+.card-body {
+    height: 350px;
+}
+
+.btn {
+    float: right;
+    color: black
+}
+h1,h5{
+    color: black
+}

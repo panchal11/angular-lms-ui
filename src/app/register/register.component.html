@@ -1,3 +1,133 @@
-<p>
-  register works!
-</p>
+<div class="main">
+  <div class="bg-layer">
+    <div class="container-fluid">
+      <div class="card text-center border-0">
+        <div class="card-header"
+          style="background-image: radial-gradient(circle at top right, white , rgb(218,242,198));">
+          <img src="/assets/image/500.png" alt="EduNextgen" class="center">
+
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4 offset-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h1>Sign up now</h1>
+
+                <form [formGroup]="myform" (ngSubmit)="onSubmit()">
+
+                  <div class="form-row">
+
+                    <div class="form-group col-md-6">
+                      <input mdbInput type="text" class="form-control" id="fullName" placeholder="Full Name"
+                        name="fullName" formControlName="fullName">
+                      <div *ngIf="myform.get('fullName').invalid && myform.get('fullName').touched" class="text-danger">
+                        enter full name
+                      </div>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                      <input mdbInput type="text" class="form-control" id="usn" placeholder="Roll Number/USN"
+                        formControlName="usn">
+                      <span *ngIf="myform.get('usn').touched && myform.get('usn').invalid " class="text-danger">enter
+                        usn number</span>
+                    </div>
+                    <div class="form-group col-md-6">
+
+                      <select class="browser-default custom-select" formControlName="gender" id="gender">
+                        <option *ngFor="let g of gender">{{g}}
+
+                        </option>
+
+                      </select>
+
+
+                    </div>
+
+                    <div class="form-group col-md-6">
+
+                      <select class="browser-default custom-select" formControlName="branch">
+                        <option *ngFor="let b of branch">{{b}}
+
+                        </option>
+
+                      </select>
+
+                    </div>
+
+
+
+
+
+                    <div class="form-group col-md-6">
+
+                      <input mdbInput type="email" class="form-control" id="emailId" placeholder="E-mail ID"
+                        formControlName="emailId">
+                      <div *ngIf="myform.get('emailId').invalid && myform.get('emailId').touched" class="text-danger">
+                        <span *ngIf="myform.get('emailId').errors.required">enter mail id</span>
+                        <span *ngIf="myform.get('emailId').errors.pattern">email id is invalid</span>
+
+
+                      </div>
+                    </div>
+
+                    <div class="form-group col-md-6">
+
+                      <select class="browser-default custom-select" formControlName="semester">
+                        <option *ngFor="let s of semester" [value]="s">{{s}}</option>
+
+                      </select>
+
+                    </div>
+                  </div>
+                  <div class="form-row">
+
+                    <div class="form-group col-md-6">
+                      <input mdbInput type="number" class="form-control" id="mobileNo" placeholder="Mobile Number"
+                        formControlName="mobileNo">
+                      <div *ngIf="myform.get('mobileNo').invalid && myform.get('mobileNo').touched" class="text-danger">
+                        <span *ngIf="myform.get('mobileNo').errors.required">enter mobile number</span>
+                        <span *ngIf="myform.get('mobileNo').errors.pattern"> mobile number is invalid</span>
+
+
+                      </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <input mdbInput type="date" class="form-control" id="inputdate" placeholder="Date of Birth"
+                        formControlName="date">
+
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <h5>Upload Profile Pic<input type="file" name="file"></h5>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <input mdbInput type="text" class="form-control" id="inputuniversity" placeholder="University">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <input mdbInput type="text" class="form-control" id="inputcollege" placeholder="College Name">
+                    </div>
+                  </div>
+
+
+                  <button type="submit" class="btn btn-success btn-lg" (onClick)="onSubmit()"
+                    [disabled]="!myform.valid">Sign Me Up
+
+                  </button>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

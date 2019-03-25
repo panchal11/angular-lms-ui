@@ -1,82 +1,87 @@
+<div class="main">
+  <div class="bg-layer">
+    <div class="container-fluid">
+      <div class="card text-center border-0">
+        <div class="card-header"
+          style="background-image: radial-gradient(circle at top right, white , rgb(218,242,198));">
+          <img src="/assets/image/500.png" alt="EduNextgen" class="center">
 
-<div class="main"> 
-    <div class="bg-layer">
-<div class="container-fluid">
-  <div class="card text-center border-0">
-    <div class="card-header" style="background-image: radial-gradient(circle at top right, white , rgb(218,242,198));">
-        <img src="/assets/image/500.png" alt="EduNextgen" class="center">
-        
         </div>
-  </div>
+      </div>
 
 
- 
-  <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-4 offset-md-4">
-          <div class="card">
-            <div class="card-body">
-              <h1 class="text-center">Login to our <br />Dashboard</h1>
-              <h4 class="text-center">Enter you Username and Password to log on</h4>
-              <form action="/action_page.php" [formGroup]="signUp" (ngSubmit)="onSignup()">
-                <div class="form-row align-items-center">
-                  <div class="col-sm-6 offset-md-4 mb-3">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="fas fa-user" style="font-size:24px;color:rgb(101, 161, 38)"></i></div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 offset-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h1 class="text-center">Login to our <br />Dashboard</h1>
+                <h4 class="text-center">Enter you Username and Password to log on</h4>
+                <form action="/action_page.php" [formGroup]="signUp" (ngSubmit)="onSignup()">
+                  <div class="form-row align-items-center">
+                    <div class="col-sm-6 offset-md-4 mb-3">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fas fa-user"
+                              style="font-size:24px;color:rgb(101, 161, 38)"></i></div>
+                        </div>
+
+
+                        <input type="text" class="form-control-input" id="username" name="username"
+                          placeholder="User Name" formControlName="username">
+                        <div *ngIf="username.invalid && (username.dirty || username.touched)" class="text-danger">
+
+                          <div *ngIf="username.errors.required">
+                            user name is required.
+                          </div>
+                        </div>
+
                       </div>
-                    
-                    
-                    <input type="text" class="form-control-input" id="username" name="username" placeholder="User Name" formControlName="username">
-                    <div *ngIf="username.invalid && (username.dirty || username.touched)" class="text-danger">
-
-                        <div *ngIf="username.errors.required">
-                                 user name is required.
-                                    </div>
-                                        </div>
-                  
-                  </div>
-
-                  </div>
-                  <div class="col-sm-6 offset-md-4">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text"><i class="fas fa-lock" style="font-size:24px;color:rgb(101, 161, 38)"></i></div>
-                      </div>
-                      <input type="password" class="form-control-input" id="pwd" name="pwd" placeholder="Password" formControlName="password">
-
-                      <div *ngIf="password.invalid && password.touched"
-                      class="text-danger">
-                   
-                    <span *ngIf="password.errors.required">
-                     password is required.
-                    </span>
-                    <span  *ngIf="password.errors.minlength">
-                     password should be of minimum 6 letter.
-                    </span>
-                   
-                    </div>
-
-
-
-
-
 
                     </div>
+                    <div class="col-sm-6 offset-md-4">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fas fa-lock"
+                              style="font-size:24px;color:rgb(101, 161, 38)"></i></div>
+                        </div>
+                        <input type="password" class="form-control-input" id="pwd" name="pwd" placeholder="Password"
+                          formControlName="password">
+
+                        <div *ngIf="password.invalid && password.touched" class="text-danger">
+
+                          <span *ngIf="password.errors.required">
+                            password is required.
+                          </span>
+                          <span *ngIf="password.errors.minlength">
+                            password should be of minimum 6 letter.
+                          </span>
+
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="col-12 offset-sm-4">
+                      <a href="#">Forgot Pasword?</a>
+                    </div>
+                    <div class="col-4 offset-md-8">
+                      <button type="submit" class="btn btn-lg btn-success p-2">Sign In</button>
+                    </div>
+                    <div class="col-6">
+                      <nav>
+                        <a routerLink="/register" routerLinkActive="active">Creat New Account <i
+                            class="fas fa-long-arrow-alt-right" style="font-size:15px;color: black"></i></a>
+                      </nav>
+                    </div>
                   </div>
-                  <div class="col-12 offset-sm-4">
-                    <a href="#">Forgot Pasword?</a>
-                  </div>
-                  <div class="col-4 offset-md-8">
-                    <button type="submit" class="btn btn-lg btn-success p-2">Sign In</button>
-                  </div>
-                  <div class="col-6">
-                    <a href="#">Creat New Account <i class="fas fa-long-arrow-alt-right" style="font-size:15px;color: black"></i></a>
-                  </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-     </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
