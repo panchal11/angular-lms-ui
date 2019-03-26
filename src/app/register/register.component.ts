@@ -1,11 +1,27 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl , Validators} from '@angular/forms';
+import { RegisterService } from '../register1.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+  private users;
+  constructor(
+    private _registerApi:RegisterService
+  ) {
+    this._registerApi
+      .getUsers()
+      .subscribe(
+        (response) => {
+          this.users = response;
+        },
+        (error) => {
+          console.info('e', error)
+        }
+      )
+  }
 semester=["Semester","one","two","three"];
 branch=["Branch","CS","IS","ECE"];
 gender=["Gender","Male","Female","Other"];

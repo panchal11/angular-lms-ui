@@ -106,13 +106,19 @@
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-12">
-                      <input mdbInput type="text" class="form-control" id="inputuniversity" placeholder="University">
+                      <select mdbInput type="text" class="form-control" id="inputuniversity" placeholder="University">
+                        <option>University Name</option>
+                        <option *ngFor="let user of users" value={{user.login}}>{{user.login}}</option>
+                        </select>
                     </div>
                   </div>
 
                   <div class="form-row">
                     <div class="form-group col-md-12">
-                      <input mdbInput type="text" class="form-control" id="inputcollege" placeholder="College Name">
+                      <select mdbInput type="text" class="form-control" id="inputcollege" placeholder="College Name">
+                          <option>College Name</option>
+                          <option *ngFor="let user of users" value={{user.login}}>{{user.login}}</option>
+                          </select>
                     </div>
                   </div>
 
