@@ -1,0 +1,22 @@
+.container-fluid {
+  background-image: linear-gradient(to top right, rgb(159, 252, 182) , #FFFFFF);
+ 
+ 
+  
+  
+}
+.row {
+  padding: 122px 0 180px;
+}
+button {
+  color: #FFFFFF;
+  font-size: 16px;
+  padding: 8px 20px;
+ 
+  background-color: #8CC63F !important;
+}
+ .card {
+  background-color: rgba(33, 33,33, 0.2) !important;
+  
+} 
+ 

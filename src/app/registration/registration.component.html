@@ -1,0 +1,108 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-12 col-md-12 text-center">
+      <img src="assets/images/edunextgen-logo-250.png" alt="">
+      <br>
+      <br>
+      <p class="text-center font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      <br><br>
+    </div>
+    <div class="col-xl-8 offset-xl-2">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="text-center font-weight-bold" style="color: #333333">Sign Up</h3>
+          <form [formGroup]="myform" (ngSubmit)="onSubmit()">
+            <div class="form-row align-items-center">
+              <div class="col-sm-6 my-1">
+                <input type="text" class="form-control" id="fullName" placeholder="Full Name" name="fullName"
+                  formControlName="fullName">
+                <div *ngIf="myform.get('fullName').invalid && myform.get('fullName').touched" class="text-danger">
+                  enter full name
+                </div>
+
+              </div>
+              <div class="col-sm-6 my-1">
+                <select class="form-control" id="gender">
+                  <option disabled>Gender</option>
+                  <option *ngFor="let g of gender" [value]="g">{{g}}</option>
+
+                </select>
+              </div>
+              <div class="col-sm-6 my-1">
+                <input Input type="text" class="form-control" id="usn" formControlName="usn"
+                  placeholder="Roll Number/USN">
+                <span *ngIf="myform.get('usn').touched && myform.get('usn').invalid " class="text-danger">enter
+                  usn number</span>
+              </div>
+              <div class="col-sm-6 my-1">
+                <select class="form-control" id="Branch">
+                  <option disabled>Branch</option>
+                  <option *ngFor="let b of branch" [value]="b">{{b}}</option>
+
+                </select>
+              </div>
+              <div class="col-sm-6 my-1">
+                <input type="email" class="form-control" id="emailId" placeholder="E-mail Id" formControlName="emailId">
+                <div *ngIf="myform.get('emailId').invalid && myform.get('emailId').touched" class="text-danger">
+                  <span *ngIf="myform.get('emailId').errors.required">enter mail id</span>
+                  <span *ngIf="myform.get('emailId').errors.pattern">email id is invalid</span>
+
+
+                </div>
+
+              </div>
+              <div class="col-sm-6 my-1">
+                <input type="number" class="form-control" id="mobileNo" placeholder="Mobile Number"
+                  formControlName="mobileNo">
+                <div *ngIf="myform.get('mobileNo').invalid && myform.get('mobileNo').touched" class="text-danger">
+                  <span *ngIf="myform.get('mobileNo').errors.required">enter mobile number</span>
+                  <span *ngIf="myform.get('mobileNo').errors.pattern"> mobile number is invalid</span>
+
+
+                </div>
+              </div>
+              <div class="col-sm-6 my-1">
+                <select class="form-control" id="Semester">
+                    <option disabled>Semester</option>
+                  <option *ngFor="let s of semester" [value]="s">{{s}}</option>
+                </select>
+              </div>
+              <div class="col-sm-6 my-1">
+                <input type="date" class="form-control" id="inputdate" placeholder="Date of Birth"
+                  formControlName="date">
+
+
+
+
+              </div>
+
+              <div class="col-sm-6 my-1">
+                <select mdbInput type="text" class="form-control" id="inputuniversity" placeholder="University">
+                  <option disabled>University Name</option>
+                  <option>university</option>
+                </select>
+              </div>
+
+              <div class="col-sm-6 my-1">
+                <select mdbInput type="text" class="form-control" id="inputcollege" placeholder="College Name">
+                  <option disabled>College Name</option>
+                  <option></option>
+                </select>
+
+              </div>
+
+              <div class="col-sm-6 my-1">
+                <p class="font-weight-bold">Upload Profile Pic<input type="file" name="file"></p>
+              </div>
+              <div class="col-auto ml-auto">
+                <button type="submit" class="btn btn-success" (onClick)="onSubmit()" [disabled]="!myform.valid">Sign Me
+                  Up</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

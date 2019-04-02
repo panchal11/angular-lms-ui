@@ -1,0 +1,40 @@
+.container-fluid {
+  background-color: #FFFFFF;
+}
+.items {
+  padding: 40px 0 20px;
+}
+.navigation-arrow {
+  height: 30px;
+  
+}
+.card {
+  width: 225px;
+  margin-right: 40px;
+  background-color: #DCEDC7;
+}
+.card-body {
+  padding: 10px;
+}
+.card-icon {
+  top: -30px;
+  position: absolute;
+  float: left;
+  margin-right: 10px;
+  width: 60px;
+  height: 60px;
+}
+.card-title {
+  float: right;
+  color: #333333;
+  font-size: 18px;
+  margin: 0;
+}
+.status {
+  font-size: 12px;
+  color: #333333;
+}
+.name {
+  font-size: 16px;
+  font-weight: 500 !important;
+}

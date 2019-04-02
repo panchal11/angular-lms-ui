@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="card-deck col-xl-12">
+        <div *ngFor="let hero of heroes" class="card">
+          <img class="card-img-top" src="{{ hero.src }}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title text-center">{{ hero.title }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

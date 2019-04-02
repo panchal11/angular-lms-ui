@@ -1,6 +1,22 @@
 .container-fluid {
-  background-image: linear-gradient(to top right, #DCEDC7 , #FFFFFF);
+  background-image: linear-gradient(to top right, rgb(159, 252, 182) , #FFFFFF);
+  height: 100vh;
+ 
 }
-.row {
-  padding: 60px 0 118px;
+
+button {
+  color: #FFFFFF;
+  font-size: 16px;
+  padding: 8px 20px;
+  margin-top: 16px !important;
+  background-color: #8CC63F !important;
+}
+.card {
+  background-color: rgba(33, 33,33, 0.2) !important;
+} 
+a:hover{
+  color: black
+}
+.card-cascade{
+  display: block;
 }

@@ -1,38 +1,58 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12 text-center">
-      <img src="assets/edunextgen-logo-250.png" alt="">
-      <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <img src="assets/images/edunextgen-logo-250.png" alt="">
+      <br><br>
+      <p class="text-center font-weight-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       <br><br>
     </div>
     <div class="col-md-4 offset-md-4">
       <div class="card">
         <div class="card-body">
-          <h3 class="text-center">Login to our <br />Dashboard</h3>
-          <p class="text-center">Enter you Username and Password to log on</p>
-          <form>
+          <h3 class="text-center font-weight-bold" style="color: #333333">Login to our <br />Dashboard</h3>
+          <p class="text-center roboto" style="color: #666666">Enter you Username and Password to log on</p>
+          <form [formGroup]="signUp" (ngSubmit)='onSignup()'>
             <div class="form-row align-items-center">
               <div class="col-sm-12 my-1">
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <div class="input-group-text"><i class="fas fa-user"></i></div>
+                    <div class="input-group-text" style="background:#8CC63F"><i class="fas fa-user"></i></div>
                   </div>
-                  <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="User Name">
+                  <input type="text" class="form-control" id="username" placeholder="User Name"
+                    formControlName="username">
+                </div>
+              </div>
+              <div *ngIf="username.invalid && (username.dirty || username.touched)" class="text-danger">
+                <div *ngIf="username.errors.required">
+                  <div class="col-auto ml-4">
+                    user name is required
+                  </div>
                 </div>
               </div>
               <div class="col-sm-12 my-1">
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <div class="input-group-text"><i class="fas fa-lock"></i></div>
+                    <div class="input-group-text" style="background:#8CC63F"><i class="fas fa-lock"></i></div>
                   </div>
-                  <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Password">
+                  <input type="text" class="form-control" id="password" placeholder="Password"
+                    formControlName="password">
+                </div>
+                <div *ngIf="password.invalid && password.touched" class="text-danger">
+                  <span *ngIf="password.errors.required">
+                    <div class="col-auto ml-4">
+                      password is requried
+                    </div>
+                  </span>
+                  <span *ngIf="password.errors.minlength">
+                    password should be of minimum 6 letter
+                  </span>
                 </div>
               </div>
               <div class="col-12">
-                <p style="float-right"><a href="#">Forgot Pasword</a></p>
+                <p class="text-right roboto"><a href="#">Forgot Pasword</a></p>
               </div>
               <div class="col-auto ml-auto">
-                <button type="submit" class="btn btn-success">Sign In</button>
+                <button type="submit" class="btn btn-success" style="color:#333333">Sign In</button>
               </div>
               <div class="col-12">
                 <a href="#">Creat New Account <i class="fas fa-long-arrow-alt-right"></i></a>
