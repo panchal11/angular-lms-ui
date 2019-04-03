@@ -18,7 +18,8 @@
                   <div class="input-group-prepend">
                     <div class="input-group-text"><i class="fas fa-user"></i></div>
                   </div>
-                  <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="User Name">
+                  <input id="username" #username required autofocus
+                  type="text" class="form-control"  placeholder="User Name">
                 </div>
               </div>
               <div class="col-sm-12 my-1">
@@ -26,14 +27,18 @@
                   <div class="input-group-prepend">
                     <div class="input-group-text"><i class="fas fa-lock"></i></div>
                   </div>
-                  <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Password">
+                  <input type="password" 
+                  required autofocus id="password" #password 
+                  class="form-control"  placeholder="Password">
                 </div>
               </div>
               <div class="col-12">
                 <p class="text-right"><a href="#">Forgot Pasword</a></p>
               </div>
               <div class="col-auto ml-auto">
-                <button type="submit" class="btn btn-success">Sign In</button>
+                <button type="submit" class="btn btn-success"
+                (click)="login(username.value, password.value)"
+                >Sign In</button>
               </div>
               <div class="col-12">
                 <a href="#">Creat New Account <i class="fas fa-long-arrow-alt-right"></i></a>
