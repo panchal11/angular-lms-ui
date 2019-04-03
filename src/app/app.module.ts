@@ -36,22 +36,29 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
-import { MasterpageComponent } from './masterpage/masterpage.component';
-import { TopnavComponent } from './masterpage/topnav/topnav.component';
-import { MainnavComponent } from './masterpage/mainnav/mainnav.component';
-import { FooterComponent } from './masterpage/footer/footer.component';
-import { SideNavComponent } from './masterpage/side-nav/side-nav.component';
+import { TopnavComponent } from './topnav/topnav.component';
+import { MainnavComponent } from './mainnav/mainnav.component';
+import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+import { RegistrationComponent } from './registration/registration.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MycoursesComponent } from './mycourses/mycourses.component';
+import { MastertemplateComponent } from './mastertemplate/mastertemplate.component';
+import { CloudlabComponent } from './cloudlab/cloudlab.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginpageComponent,
-    MasterpageComponent,
     TopnavComponent,
     MainnavComponent,
     FooterComponent,
-    SideNavComponent,
+    RegistrationComponent,
+    DashboardComponent,
+    MycoursesComponent,
+    MastertemplateComponent,
+    CloudlabComponent,
   ],
   imports: [
     BrowserModule,
@@ -87,7 +94,8 @@ import { FormsModule } from '@angular/forms';
     MatSnackBarModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    Ng2CarouselamosModule
   ],
   providers: [],
   bootstrap: [AppComponent]

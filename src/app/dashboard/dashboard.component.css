@@ -1,0 +1,86 @@
+.dashboard {
+  padding: 20px 0 20px 30px;
+}
+.card-deck {
+  display: inline-block;
+}
+.card {
+  width: 287px;
+  padding: 0 10px;
+  margin-bottom: 30px;
+  display: inline-block;
+  background-color: #DCEDC7;
+}
+.card-img-top {
+  margin-top: -10px;
+}
+.card-title {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+}
+.sidebar{
+ padding: 30px;
+ position: absolute;
+ width: 100%;
+ height: 100% !important;
+ background-color: #DCEDC7;
+ right: 0;
+ box-shadow: 5px #333333;
+}
+
+#fullDiv {
+position: absolute;
+margin: 0;
+padding: 0;
+left: 0;
+top: 100px;
+bottom: 0;
+right: 0;
+overflow: hidden;
+}
+
+.calendar-div {
+  /* padding: 0 30px; */
+  height: 250px;
+}
+.calendar {
+margin: 0;
+padding: 0;
+}
+
+.calendar > li {
+float: left;
+display: block;
+width: 14.2857%;
+text-align: center;
+list-style-type: none;
+}
+
+.calendar > li:nth-child(n+1):nth-child(-n+7) {
+font-weight: 900;
+color: #e67e22;
+}
+
+.calendar > li:nth-child(n+39), li:nth-child(n+8):nth-child(-n+16) {
+font-weight: 900;
+color: rgba(0,0,0,.3);
+}
+
+.calendar > li:hover:nth-child(n+8):nth-child(-n+38), li:nth-child(17){
+border-radius: 5px;
+background-color: #1abc9c;
+color: #ecf0f1;
+}
+.upcoming-events {
+  height: 200px;
+  overflow-y: scroll;
+}
+.calendar-card-header {
+  color: #FFFFFF;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: #8CC63F !important
+}
+.list-group-item {
+  padding: 6px 20px !important;
+}
