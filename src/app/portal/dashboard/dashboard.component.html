@@ -8,7 +8,7 @@
           <div *ngFor="let hero of heroes" class="card">
             <img class="card-img-top" src="{{ hero.src }}" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title text-center">{{ hero.title }}</h5>
+              <a routerLink="{{ hero.route }}" ><h5 class="card-title text-center">{{ hero.title }}</h5></a>
             </div>
           </div>
         </div>
