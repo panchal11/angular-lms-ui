@@ -18,7 +18,7 @@ export class AuthenticationService {
 
     login(username, password) {
         this.setToken(this.token);
-        this.router.navigate(['portal', 'dashboard']);
+        this.router.navigate(['portal/dashboard']);
     }
 
     logout() {
