@@ -1,0 +1,13 @@
+.container-fluid {
+  background-image: linear-gradient(to top right, #DCEDC7 , #FFFFFF);
+}
+.row {
+  padding: 60px 0 118px;
+}
+button {
+  color: #FFFFFF;
+  font-size: 16px;
+  padding: 8px 20px;
+  margin-top: 16px !important;
+  background-color: #8CC63F !important;
+}
