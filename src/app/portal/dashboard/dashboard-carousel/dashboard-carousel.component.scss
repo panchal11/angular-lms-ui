@@ -1,6 +1,6 @@
 .container-fluid {
   background-color: #FFFFFF;
-  margin-top: 20px;
+  margin-top: 6px;
 }
 .items {
   padding: 30px 0 20px;
@@ -10,14 +10,14 @@
 }
 .card {
   width: 225px;
-  margin-right: 60px;
+  margin-right: 30px;
   background-color: #DCEDC7;
 }
 .card-body {
   padding: 10px;
 }
 .card-icon {
-  top: -30px;
+  top: -20px;
   position: absolute;
   float: left;
   margin-right: 10px;
@@ -37,4 +37,12 @@
 .name {
   font-size: 16px;
   font-weight: 500 !important;
+}
+#prv-btn {
+  position: relative;
+  left: -25px;
+}
+#nxt-btn {
+  position: relative;
+  right: -25px;
 }
