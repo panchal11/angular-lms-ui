@@ -18,12 +18,14 @@ import { MainnavComponent } from './mainnav/mainnav.component';
 import { TopnavComponent } from './topnav/topnav.component';
 import { FooterComponent } from './footer/footer.component';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+import { HttpClientModule  } from '@angular/common/http';
 
 @NgModule({
   imports: [
       CommonModule,
       CoreRoutingModule,
       Ng2CarouselamosModule,
+      HttpClientModule
   ],
   declarations: [
      LoginpageComponent,
@@ -43,7 +45,7 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
   ],
   providers: [
       AuthenticationService,
-      AuthGuardService
+      AuthGuardService,
   ]
 })
 export class CoreModule { }

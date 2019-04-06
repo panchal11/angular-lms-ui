@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-//Angular Material Components
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule} from '@angular/router';
 
@@ -9,13 +9,14 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import { CoreModule } from './core/core.module';
-
+import { PortalModule } from './portal/portal.module'
 
 @NgModule({
   declarations: [
     AppComponent,
   ],
   imports: [
+    PortalModule,
     BrowserModule,
     CoreModule,
     BrowserAnimationsModule,

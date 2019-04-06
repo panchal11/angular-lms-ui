@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CoursesserviceService } from '../services/courses/coursesservice.service';
+
 
 @Component({
   selector: 'app-mycourses',
@@ -7,14 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MycoursesComponent implements OnInit {
   courses: Array<any> = [];
-  constructor() {
-    this.courses = [
-      {text: 'C Programming For Beginners - Master the C Language', modules: 8 , hours: 12 ,src: 'assets/images/c-programming.png' ,percentage:'60%'},
-      {text: 'JAVA Programming For Beginners - Master the Java Language', modules: 15 , hours: 18 ,src: 'assets/images/java-programming.png' ,percentage:'40%'}
-    ]
+  constructor( private courseservice: CoursesserviceService) {
    }
 
   ngOnInit() {
+    this.courseservice.getcourses().subscribe(function(data){
+      this.courses = data;
+      console.log(this.courses);
+    })
   }
 
 }
