@@ -13,10 +13,10 @@ const routes: Routes = [
 	},
 	{
 		path: 'dashboard',
-		component: PortalComponent,
-		children: [
-			{ path: '', component: DashboardComponent }
-		]
+		component: DashboardComponent,
+		// children: [
+		// 	{ path: '', component: DashboardComponent }
+		// ]
   },
   {
 		path: 'courses',

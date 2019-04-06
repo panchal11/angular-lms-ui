@@ -1,11 +1,11 @@
 .dashboard {
   padding: 20px 0 20px 30px;
 }
-.card-deck {
+/* .card-deck {
   display: inline-block;
-}
+} */
 .card {
-  width: 287px;
+  /* width: 287px; */
   padding: 0 10px;
   margin-bottom: 30px;
   display: inline-block;

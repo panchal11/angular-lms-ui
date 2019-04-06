@@ -1,7 +1,7 @@
-<div class="container-fluid" id="main-nav">
+<div class="container-fluid">
   <div ng2-carouselamos class="slides-wrapper"
     [items]="items"
-    [width]="1260"
+    [width]="922"
     [$prev]="prev"
     [$next]="next"
     [$item]="item">
@@ -19,9 +19,9 @@
     <div class="items">
       <div class="card-deck">
         <div class="card card-cascade narrower">
-          <div class="card-body text-center">
+          <div class="card-body">
             <img class="card-icon" src="{{ item.src }}" alt="Carousel IMG">
-            <!-- <p class="status text-right">{{ item.stats }}</p> -->
+            <p class="status text-right">{{ item.stats }}</p>
             <h4 class="name card-title">{{ item.name }}</h4>
           </div>
         </div>

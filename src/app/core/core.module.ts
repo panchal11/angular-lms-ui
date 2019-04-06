@@ -27,11 +27,11 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
   ],
   declarations: [
      LoginpageComponent,
-     MastertemplateComponent, 
-     RegistrationComponent, 
+     MastertemplateComponent,
+     RegistrationComponent,
      NotFoundComponent,
-     MainnavComponent, 
-     FooterComponent, 
+     MainnavComponent,
+     FooterComponent,
      TopnavComponent
     ],
   exports: [
@@ -39,7 +39,8 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
       MastertemplateComponent,
       MainnavComponent,
       FooterComponent,
-      TopnavComponent
+      TopnavComponent,
+      Ng2CarouselamosModule
   ],
   providers: [
       AuthenticationService,
@@ -47,5 +48,3 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
   ]
 })
 export class CoreModule { }
-
-
