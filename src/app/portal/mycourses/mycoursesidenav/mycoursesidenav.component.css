@@ -1,0 +1,14 @@
+.navbar{
+    background-color: rgb(51, 43, 43);
+    position: fixed;
+    width:300px;
+
+    top:220px;
+    left:0;
+    height: 100%;
+    z-index: 99;
+    overflow: scroll;
+}
+ p{
+    color:white;
+}

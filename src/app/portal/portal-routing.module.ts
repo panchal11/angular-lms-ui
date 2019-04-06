@@ -4,6 +4,9 @@ import { PortalComponent } from './portal.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MycoursesComponent } from './mycourses/mycourses.component';
 import { CloudlabComponent } from './cloudlab/cloudlab.component';
+import { MycoursesidenavComponent } from './mycourses/mycoursesidenav/mycoursesidenav.component';
+
+
 
 const routes: Routes = [
 	{
@@ -25,7 +28,14 @@ const routes: Routes = [
 			{ path: '', component: MycoursesComponent }
 		]
 	},
-	{
+  {
+		path: 'myside',
+		component: PortalComponent,
+		children: [
+			{ path: '', component: MycoursesidenavComponent}
+		]
+	},
+  {
 		path: 'cloudeLab',
 		component: PortalComponent,
 		children: [
