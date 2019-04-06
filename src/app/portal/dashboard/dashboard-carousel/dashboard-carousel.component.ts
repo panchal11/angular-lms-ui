@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-mainnav',
-  templateUrl: './mainnav.component.html',
-  styleUrls: ['./mainnav.component.css']
+  selector: 'app-dashboard-carousel',
+  templateUrl: './dashboard-carousel.component.html',
+  styleUrls: ['./dashboard-carousel.component.scss']
 })
-export class MainnavComponent implements OnInit {
+export class DashboardCarouselComponent implements OnInit {
 
   items: Array<any> = []
 
@@ -26,5 +26,5 @@ export class MainnavComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+
 }

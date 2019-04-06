@@ -1,14 +1,16 @@
-<!-- <app-topnav></app-topnav> -->
+<app-topnav></app-topnav>
 <div class="container-fluid">
   <div class="row">
     <div class="col-xl-9">
-      <!-- <app-mainnav></app-mainnav> -->
+      <app-dashboard-carousel></app-dashboard-carousel>
       <div class="dashboard">
-        <div class="card-deck">
-          <div *ngFor="let hero of heroes" class="card">
-            <img class="card-img-top" src="{{ hero.src }}" alt="Card image cap">
-            <div class="card-body">
-              <a routerLink="{{ hero.route }}" ><h5 class="card-title text-center">{{ hero.title }}</h5></a>
+        <div class="row">
+          <div *ngFor="let hero of heroes" class="col-xl-4">
+            <div class="card">
+              <img class="card-img-top" src="{{ hero.src }}" alt="Card image cap">
+              <div class="card-body">
+                <a routerLink="{{ hero.route }}" ><h5 class="card-title text-center">{{ hero.title }}</h5></a>
+              </div>
             </div>
           </div>
         </div>
