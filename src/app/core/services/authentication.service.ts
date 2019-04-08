@@ -35,7 +35,11 @@ export class AuthenticationService {
     }
 
     getAccessToken() {
-        return JSON.parse(localStorage.getItem(this.tokenKey))['access_token'];
+        if(localStorage.getItem(this.tokenKey)){
+            return JSON.parse(localStorage.getItem(this.tokenKey))['access_token'];
+        }else{
+            this.router.navigate(['login']);
+        }
     }
 
     isAuthenticated() {
